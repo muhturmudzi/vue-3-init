@@ -16,4 +16,14 @@
 
 .box {
   @apply py-4 px-6 rounded-md bg-white shadow;
+}
+
+.btn, .btn--primary-outline, .btn--primary {
+  @apply inline-block py-2 px-6 text-base font-semibold rounded-lg disabled:opacity-75 disabled:cursor-not-allowed;
+}
+.btn--primary {
+  @apply bg-primary-100 border border-solid border-primary-100 hover:bg-[#008c86] text-dark-400 transition;
+}
+.btn--primary-outline {
+  @apply bg-transparent border border-solid border-primary-100 hover:bg-[#008c86] text-dark-400 transition;
 }/*# sourceMappingURL=app.css.map */
