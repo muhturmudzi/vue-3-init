@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    @apply font-poppins;
+  }
+  body {
+    @apply text-dark-100;
+  }
+}
+.input {
+  @apply text-black;
+}
+
+.box {
+  @apply px-4 rounded-lg border border-solid border-red-500 bg-slate-300;
+}/*# sourceMappingURL=app.css.map */
