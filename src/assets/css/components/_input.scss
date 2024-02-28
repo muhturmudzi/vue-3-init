@@ -1,3 +1,8 @@
 .input {
-  @apply text-black;
+  @apply py-2 px-3 outline-none border border-solid border-[#E0E0E0] bg-white w-full focus:border-primary-100
+    rounded-lg text-dark-100 placeholder:text-[#828282] disabled:bg-[#E0E0E0] disabled:cursor-not-allowed;
+
+  &.error {
+    @apply border-[#F24822] focus:border-[#F24822];
+  }
 }

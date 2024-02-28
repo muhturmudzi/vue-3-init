@@ -11,7 +11,11 @@
   }
 }
 .input {
-  @apply text-black;
+  @apply py-2 px-3 outline-none border border-solid border-[#E0E0E0] bg-white w-full focus:border-primary-100
+    rounded-lg text-dark-100 placeholder:text-[#828282] disabled:bg-[#E0E0E0] disabled:cursor-not-allowed;
+}
+.input.error {
+  @apply border-[#F24822] focus:border-[#F24822];
 }
 
 .box {
@@ -19,11 +23,36 @@
 }
 
 .btn, .btn--primary-outline, .btn--primary {
-  @apply inline-block py-2 px-6 text-base font-semibold rounded-lg disabled:opacity-75 disabled:cursor-not-allowed;
+  @apply inline-block py-2 px-6 text-base font-semibold rounded-lg disabled:opacity-75 disabled:cursor-not-allowed min-w-36;
 }
 .btn--primary {
   @apply bg-primary-100 border border-solid border-primary-100 hover:bg-[#008c86] text-dark-400 transition;
 }
 .btn--primary-outline {
   @apply bg-transparent border border-solid border-primary-100 hover:bg-[#008c86] text-dark-400 transition;
+}
+
+.list-dropdown {
+  @apply opacity-0 invisible absolute border border-solid border-primary-100 rounded-lg top-[120%] left-0 bg-white w-full max-h-0 overflow-y-scroll;
+}
+.list-dropdown.active {
+  @apply opacity-100 visible max-h-48 transition-all;
+}
+.list-dropdown::-webkit-scrollbar {
+  @apply w-3;
+}
+.list-dropdown::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.list-dropdown::-webkit-scrollbar-thumb {
+  @apply border-4 border-solid border-white bg-primary-100 rounded-lg;
+}
+.list-dropdown > li {
+  @apply px-4 py-1 hover:bg-[#E0E0E0];
+}
+.list-dropdown > li:first-of-type {
+  @apply rounded-tl-lg pt-2;
+}
+.list-dropdown > li:last-of-type {
+  @apply rounded-bl-lg pb-2;
 }/*# sourceMappingURL=app.css.map */
