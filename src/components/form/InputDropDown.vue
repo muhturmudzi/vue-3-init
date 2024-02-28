@@ -51,6 +51,8 @@ const filterList = computed(() =>
   })
 )
 
+const isFilterListEmpty = computed(() => filterList.value.length < 1)
+
 const handleSelect = (item) => {
   console.log('select')
   search.value = item[props.label]
@@ -97,7 +99,7 @@ onClickOutside(target, () => (showList.value = false))
       >
         {{ item[props.label] }}
       </li>
-      <li v-if="filterList.length < 1">
+      <li v-if="isFilterListEmpty">
         Data not found
       </li>
     </ul>
