@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
 import { onClickOutside } from '@vueuse/core'
+import IconsArrow from '@/components/icons/Arrow.vue'
 
 const props = defineProps({
   placeholder: {
@@ -89,6 +90,10 @@ onClickOutside(target, () => (showList.value = false))
       @focus="focus"
       @blur="focusOut"
       @keyup="handleKeyUp"
+    />
+
+    <IconsArrow
+      :class="`fill-primary-100 w-7 h-7 transition-transform absolute top-2/4 -translate-y-2/4 right-3 ${showList? '-rotate-180' : ''}`"
     />
 
     <ul class="list-dropdown" :class="{'active': showList}">

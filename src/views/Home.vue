@@ -116,7 +116,7 @@ const inject = (val) => {
     </div>
 
     <InputDropDown
-      placeholder="Select Partai"
+      placeholder="Search or select Partai"
       :list="listData"
       label="name"
       reduce="id"

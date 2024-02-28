@@ -1,5 +1,5 @@
 .list-dropdown {
-  @apply opacity-0 invisible absolute border border-solid border-primary-100 rounded-lg top-[120%] left-0 bg-white w-full max-h-0 overflow-y-scroll;
+  @apply opacity-0 invisible absolute border border-solid border-primary-100 rounded-lg top-[120%] left-0 bg-white w-full max-h-0 overflow-y-scroll shadow-lg;
 
   &.active {
     @apply opacity-100 visible max-h-48 transition-all;
